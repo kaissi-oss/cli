@@ -103,7 +103,7 @@ jobs:
     docker:
       - image: snapcore/snapcraft
     steps:
-      - run: git clone https://github.com/heroku/cli .
+      - checkout
       - run: snapcraft --debug
   build_and_release_win_inst:
     <<: *defaults
