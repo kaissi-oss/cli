@@ -146,7 +146,7 @@ workflows:
           requires:
             - test
             - build_os_windows
-      - build_and_release_deb:
+      - build_and_release_snap:
         filters: *all_pushes
       - build_and_release_deb:
           <<: *release
