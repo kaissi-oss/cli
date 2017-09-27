@@ -91,6 +91,7 @@ jobs:
       - run: {command: "./scripts/release/invalidate_cdn", when: always}
   build_and_release_deb:
     <<: *defaults
+    docker: *release_docker
     steps:
       - checkout
       - attach_workspace: {at: dist}
@@ -147,7 +148,7 @@ workflows:
             - test
             - build_os_windows
       - build_and_release_snap:
-        filters: *all_pushes
+          filters: *all_pushes
       - build_and_release_deb:
           <<: *release
           requires:
