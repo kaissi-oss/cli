@@ -91,13 +91,19 @@ jobs:
       - run: {command: "./scripts/release/invalidate_cdn", when: always}
   build_and_release_deb:
     <<: *defaults
-    docker: *release_docker
     steps:
       - checkout
       - attach_workspace: {at: dist}
       - run: ./scripts/build/deb
       - run: ls dist/apt
       - run: ./scripts/release/deb
+  build_and_release_snap:
+    <<: *defaults
+    docker:
+      - image: dickeyxxx/cli-engine-docker:v3.0.6
+    steps:
+      - checkout
+      - run: snapcraft --debug
   build_and_release_win_inst:
     <<: *defaults
     docker: *windows_docker
@@ -140,6 +146,8 @@ workflows:
           requires:
             - test
             - build_os_windows
+      - build_and_release_deb:
+        filters: *all_pushes
       - build_and_release_deb:
           <<: *release
           requires:
