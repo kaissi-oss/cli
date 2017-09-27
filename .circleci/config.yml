@@ -101,7 +101,7 @@ jobs:
   build_and_release_snap:
     <<: *defaults
     docker:
-      - image: snapcraft/xenial-amd64
+      - image: snapcore/snapcraft
     steps:
       - run: git clone https://github.com/heroku/cli .
       - run: snapcraft --debug
