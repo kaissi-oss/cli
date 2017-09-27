@@ -101,7 +101,7 @@ jobs:
   build_and_release_snap:
     <<: *defaults
     docker:
-      - image: dickeyxxx/cli-engine-docker:v3.0.6
+      - image: snapcraft/xenial-amd64
     steps:
       - checkout
       - run: snapcraft --debug
