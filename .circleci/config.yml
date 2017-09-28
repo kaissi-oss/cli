@@ -100,11 +100,12 @@ jobs:
       - run: ./scripts/release/deb
   build_and_release_snap:
     docker: &release_docker
-      - image: snapcore/snapcraft
+      - image: dickeyxxx/docker-snapcraft-node:v1.0.0
         environment:
           SNAPCRAFT_SETUP_CORE: 1
     working_directory: /cli
     steps:
+      - mkdir -p ~/.config/snapcraft && echo $SNAPCRAFT_MACAROON | base64 -d > ~/.config/snapcraft/snapcraft.cfg
       - checkout
       - run: snapcraft --debug
   build_and_release_win_inst:
