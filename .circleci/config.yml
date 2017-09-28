@@ -105,7 +105,7 @@ jobs:
           SNAPCRAFT_SETUP_CORE: 1
     working_directory: /cli
     steps:
-      - mkdir -p ~/.config/snapcraft && echo $SNAPCRAFT_MACAROON | base64 -d > ~/.config/snapcraft/snapcraft.cfg
+      - run: mkdir -p ~/.config/snapcraft && echo $SNAPCRAFT_MACAROON | base64 -d > ~/.config/snapcraft/snapcraft.cfg
       - checkout
       - run: snapcraft --debug
   build_and_release_win_inst:
