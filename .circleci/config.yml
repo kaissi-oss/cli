@@ -99,13 +99,14 @@ jobs:
       - run: ls dist/apt
       - run: ./scripts/release/deb
   build_and_release_snap:
-    machine: true
+    docker: &release_docker
+      - image: snapcore/snapcraft
+        environment:
+          SNAPCRAFT_SETUP_CORE: 1
     working_directory: /cli
     steps:
       - checkout
-      - run: sudo apt update && sudo apt install -y snapd
-      - run: sudo snap install snapcraft --edge --classic
-      - run: /snap/bin/snapcraft --debug
+      - run: snapcraft --debug
   build_and_release_win_inst:
     <<: *defaults
     docker: *windows_docker
