@@ -11,13 +11,12 @@
     mustache "^2.2.1"
     shell-quote "^1.6.1"
 
-"@heroku/heroku-cli-dev-center-generator@1.1.7":
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/@heroku/heroku-cli-dev-center-generator/-/heroku-cli-dev-center-generator-1.1.7.tgz#66e86d4a4c9752a408157f8713b65a8335ea0fdb"
+"@heroku/heroku-cli-dev-center-generator@1.1.10":
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/@heroku/heroku-cli-dev-center-generator/-/heroku-cli-dev-center-generator-1.1.10.tgz#53d0f273a25a6648b41c9a571cb1b8340ce81a36"
   dependencies:
     "@heroku/remark-heroku-bash-dollar" "^1.0.4"
     "@heroku/remark-heroku-command-headings-inline-code" "^1.0.5"
-    lodash "^4.17.4"
     remark-cli "^4.0.0"
     remark-heroku-example-command "^1.0.5"
     remark-heroku-sample-code "^1.0.3"
@@ -66,6 +65,16 @@
 "@types/fs-extra@5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-5.0.0.tgz#d3e225b35eb5c6d3a5a782c28219df365c781413"
+  dependencies:
+    "@types/node" "*"
+
+"@types/jest@21.1.8":
+  version "21.1.8"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-21.1.8.tgz#d497213725684f1e5a37900b17a47c9c018f1a97"
+
+"@types/nock@9.1.0":
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/@types/nock/-/nock-9.1.0.tgz#f2f0b1da56507cb469fa08225ee78f5453b910d6"
   dependencies:
     "@types/node" "*"
 
@@ -891,16 +900,16 @@ cli-engine-heroku@^4.0.1, cli-engine-heroku@^4.1.0:
     http-call "^3.0.2"
     netrc-parser "^2.0.3"
 
-cli-engine@5.0.0-ts.9:
-  version "5.0.0-ts.9"
-  resolved "https://registry.yarnpkg.com/cli-engine/-/cli-engine-5.0.0-ts.9.tgz#c978a355cf284eb1b57576fd22574c43d646c9ab"
+cli-engine@5.0.0-ts.10:
+  version "5.0.0-ts.10"
+  resolved "https://registry.yarnpkg.com/cli-engine/-/cli-engine-5.0.0-ts.10.tgz#c68fde4a54152399736182a67bd32344e841b357"
   dependencies:
     "@heroku/linewrap" "^1.0.0"
     ansi-escapes "^3.0.0"
     cli-engine-command "10.1.0-ts.4"
     cli-engine-config "4.3.0-ts.4"
     cli-engine-heroku "6.1.0-ts.1"
-    cli-ux "^2.0.8"
+    cli-ux "^2.0.9"
     cross-spawn "5.1.0"
     debug "^3.1.0"
     filesize "^3.5.11"
@@ -914,7 +923,7 @@ cli-engine@5.0.0-ts.9:
     lodash.throttle "^4.1.1"
     lodash.uniqby "4.x"
     log-chopper "^1.0.1"
-    moment "^2.20.0"
+    moment "^2.20.1"
     netrc-parser "^2.0.3"
     node-gyp "3.x"
     rwlockfile "^1.4.10"
@@ -924,7 +933,7 @@ cli-engine@5.0.0-ts.9:
     strip-ansi "4.0.0"
     tar-fs "1.16.0"
     tmp "^0.0.33"
-    ts-lodash "4.0.6"
+    ts-lodash "4.0.7"
     yarn "1.3.2"
 
 cli-flags@1.0.19:
@@ -947,9 +956,9 @@ cli-truncate@^0.2.1:
     slice-ansi "0.0.4"
     string-width "^1.0.1"
 
-cli-ux@2.0.8, cli-ux@^2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/cli-ux/-/cli-ux-2.0.8.tgz#8cefd0e6d8aa9d7245fc21324287ff6fe3d7fa90"
+cli-ux@2.0.9, cli-ux@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/cli-ux/-/cli-ux-2.0.9.tgz#8d4c630c821367154f32a1e204cc862f2f539c08"
   dependencies:
     "@heroku/linewrap" "^1.0.0"
     ansi-escapes "^3.0.0"
@@ -980,6 +989,23 @@ cli-ux@^1.0.1, cli-ux@^1.1.10:
     strip-ansi "^4.0.0"
     supports-color "^4.4.0"
     ts-lodash "^4.0.5"
+
+cli-ux@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/cli-ux/-/cli-ux-2.0.8.tgz#8cefd0e6d8aa9d7245fc21324287ff6fe3d7fa90"
+  dependencies:
+    "@heroku/linewrap" "^1.0.0"
+    ansi-escapes "^3.0.0"
+    ansi-styles "^3.2.0"
+    cardinal "^1.0.0"
+    chalk "^2.3.0"
+    fs-extra "^5.0.0"
+    lodash "^4.17.4"
+    moment "^2.20.0"
+    password-prompt "^1.0.3"
+    strip-ansi "^4.0.0"
+    supports-color "^5.1.0"
+    ts-lodash "^4.0.6"
 
 cli-width@^2.0.0:
   version "2.2.0"
@@ -2117,7 +2143,7 @@ heroku-local@5.1.21:
 
 heroku-orgs@1.6.6:
   version "1.6.6"
-  resolved "http://cli-npm.heroku.com/heroku-orgs/-/heroku-orgs-1.6.6/bc88b86e6794b862baf686d1397261d4b2a1e56c.tgz#bc88b86e6794b862baf686d1397261d4b2a1e56c"
+  resolved "https://registry.yarnpkg.com/heroku-orgs/-/heroku-orgs-1.6.6.tgz#bc88b86e6794b862baf686d1397261d4b2a1e56c"
   dependencies:
     cli-engine-command "^7.0.6"
     cli-engine-config "^2.0.0"
@@ -2185,7 +2211,16 @@ heroku-redis@1.3.0:
     ioredis "1.9.0"
     ssh2 "^0.4.11"
 
-heroku-run@3.5.2, heroku-run@^3.4.16:
+heroku-run@3.5.4:
+  version "3.5.4"
+  resolved "https://registry.yarnpkg.com/heroku-run/-/heroku-run-3.5.4.tgz#8c11cc650c8c9d8d021b9413ecaf1f28a1762ca3"
+  dependencies:
+    cli-engine-heroku "^4.1.0"
+    co "4.6.0"
+    heroku-cli-util "^6.2.7"
+    shellwords "^0.1.1"
+
+heroku-run@^3.4.16:
   version "3.5.2"
   resolved "http://cli-npm.heroku.com/heroku-run/-/heroku-run-3.5.2/e7c8207a51a4c602123f91e3b8e7cd22ddf19b75.tgz#e7c8207a51a4c602123f91e3b8e7cd22ddf19b75"
   dependencies:
@@ -3162,7 +3197,7 @@ jest-validate@^21.1.0, jest-validate@^21.2.1:
     leven "^2.1.0"
     pretty-format "^21.2.1"
 
-jest@21.2.1:
+jest@21:
   version "21.2.1"
   resolved "https://registry.yarnpkg.com/jest/-/jest-21.2.1.tgz#c964e0b47383768a1438e3ccf3c3d470327604e1"
   dependencies:
@@ -3407,7 +3442,7 @@ load-json-file@^1.0.0:
 
 load-json-file@^2.0.0:
   version "2.0.0"
-  resolved "http://cli-npm.heroku.com/load-json-file/-/load-json-file-2.0.0/7947e42149af80d696cbf797bcaabcfe1fe29ca8.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"
+  resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"
   dependencies:
     graceful-fs "^4.1.2"
     parse-json "^2.2.0"
@@ -3821,6 +3856,10 @@ moment@^2.20.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.20.0.tgz#53396358994dd3a551e966a66af715ecb6c30ad0"
 
+moment@^2.20.1:
+  version "2.20.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.20.1.tgz#d6eb1a46cbcc14a2b2f9434112c1ff8907f313fd"
+
 ms@0.7.1:
   version "0.7.1"
   resolved "http://cli-npm.heroku.com/ms/-/ms-0.7.1/9cd13c03adbff25b65effde7ce864ee952017098.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
@@ -4128,7 +4167,7 @@ osenv@0, osenv@^0.1.4:
 
 p-cancelable@^0.3.0:
   version "0.3.0"
-  resolved "http://cli-npm.heroku.com/p-cancelable/-/p-cancelable-0.3.0/b9e123800bcebb7ac13a479be195b507b98d30fa.tgz#b9e123800bcebb7ac13a479be195b507b98d30fa"
+  resolved "https://registry.yarnpkg.com/p-cancelable/-/p-cancelable-0.3.0.tgz#b9e123800bcebb7ac13a479be195b507b98d30fa"
 
 p-finally@^1.0.0:
   version "1.0.0"
@@ -4264,7 +4303,7 @@ path-type@^1.0.0:
 
 path-type@^2.0.0:
   version "2.0.0"
-  resolved "http://cli-npm.heroku.com/path-type/-/path-type-2.0.0/f012ccb8415b7096fc2daa1054c3d72389594c73.tgz#f012ccb8415b7096fc2daa1054c3d72389594c73"
+  resolved "https://registry.yarnpkg.com/path-type/-/path-type-2.0.0.tgz#f012ccb8415b7096fc2daa1054c3d72389594c73"
   dependencies:
     pify "^2.0.0"
 
@@ -4425,7 +4464,7 @@ read-pkg-up@^1.0.1:
 
 read-pkg-up@^2.0.0:
   version "2.0.0"
-  resolved "http://cli-npm.heroku.com/read-pkg-up/-/read-pkg-up-2.0.0/6b72a8048984e0c41e79510fd5e9fa99b3b549be.tgz#6b72a8048984e0c41e79510fd5e9fa99b3b549be"
+  resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-2.0.0.tgz#6b72a8048984e0c41e79510fd5e9fa99b3b549be"
   dependencies:
     find-up "^2.0.0"
     read-pkg "^2.0.0"
@@ -4440,7 +4479,7 @@ read-pkg@^1.0.0:
 
 read-pkg@^2.0.0:
   version "2.0.0"
-  resolved "http://cli-npm.heroku.com/read-pkg/-/read-pkg-2.0.0/8ef1c0623c6a6db0dc6713c4bfac46332b2368f8.tgz#8ef1c0623c6a6db0dc6713c4bfac46332b2368f8"
+  resolved "https://registry.yarnpkg.com/read-pkg/-/read-pkg-2.0.0.tgz#8ef1c0623c6a6db0dc6713c4bfac46332b2368f8"
   dependencies:
     load-json-file "^2.0.0"
     normalize-package-data "^2.3.2"
@@ -5669,7 +5708,7 @@ trough@^1.0.0:
   version "1.0.1"
   resolved "http://cli-npm.heroku.com/trough/-/trough-1.0.1/a9fd8b0394b0ae8fff82e0633a0a36ccad5b5f86.tgz#a9fd8b0394b0ae8fff82e0633a0a36ccad5b5f86"
 
-ts-jest@21.2.4:
+ts-jest@21:
   version "21.2.4"
   resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-21.2.4.tgz#8fbcfbfbf0c58cced10dcc34a5190acc8c5312ef"
   dependencies:
@@ -5684,15 +5723,21 @@ ts-jest@21.2.4:
     source-map-support "^0.5.0"
     yargs "^10.0.3"
 
-ts-lodash@4.0.6, ts-lodash@^4.0.6:
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/ts-lodash/-/ts-lodash-4.0.6.tgz#1166589945e8a980dc809b875c9d6b70aadd8537"
+ts-lodash@4.0.7:
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/ts-lodash/-/ts-lodash-4.0.7.tgz#da926ec01529f6c15b2ce4e74dfc66cbeac0490c"
   dependencies:
     lodash "^4.17.4"
 
 ts-lodash@^4.0.5:
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/ts-lodash/-/ts-lodash-4.0.5.tgz#1d0a74de2758df43a821d176e2cc85c50925ee67"
+  dependencies:
+    lodash "^4.17.4"
+
+ts-lodash@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/ts-lodash/-/ts-lodash-4.0.6.tgz#1166589945e8a980dc809b875c9d6b70aadd8537"
   dependencies:
     lodash "^4.17.4"
 
@@ -6259,8 +6304,8 @@ yargs@^7.0.2:
     yargs-parser "^5.0.0"
 
 yargs@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-9.0.0.tgz#efe5b1ad3f94bdc20423411b90628eeec0b25f3c"
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-9.0.1.tgz#52acc23feecac34042078ee78c0c007f5085db4c"
   dependencies:
     camelcase "^4.1.0"
     cliui "^3.2.0"
